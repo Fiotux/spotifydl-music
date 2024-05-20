@@ -54,7 +54,6 @@ const getLinks = async ({
         `${artistName} - ${itemName}${extraSearch}`);
     }
   }
-console.log(musicLink);
 return musicLink;
 }
 
