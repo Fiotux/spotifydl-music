@@ -13,7 +13,7 @@ const music = youtube.music;
  * @returns {String[]} youtube links
  */
 const findLinks = async (searchTerms) => {
-  logInfo(`searching youtube with keywords "${searchTerms}"`);
+  logInfo(`searching youtube music with keywords "${searchTerms}"`);
   const result = await music.search(searchTerms, {type:'song'});
   if(result.contents[1].type == 'MusicShelf') return ["https://youtube.com/watch?v="+result.contents[1].contents[0].id];
   if(result.contents[2].type == 'MusicShelf') return ["https://youtube.com/watch?v="+result.contents[2].contents[0].id];
