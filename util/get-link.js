@@ -15,7 +15,7 @@ const music = youtube.music;
 const findLinks = async (searchTerms) => {
   logInfo(`searching youtube with keywords "${searchTerms}"`);
   const result = await music.search(searchTerms, {type:'song'});
-  return result.contents[2].contents[0].id
+  return ["https://youtube.com/watch?v="+result.contents[2].contents[0].id]
 };
 
 /**
@@ -37,7 +37,7 @@ const getLinks = async ({
   let musicLink = [];
   if (searchFormat.length) {
     const templateString = await generateTemplateString(itemName, albumName, artistName, searchFormat);
-    musicLink = ["https://youtube.com/watch?v="+findLinks(templateString)];
+    musicLink = [findLinks(templateString)];
   }
 
   // custom search format failed or was never provided try the generic way
@@ -54,7 +54,7 @@ const getLinks = async ({
         `${artistName} - ${itemName}${extraSearch}`);
     }
   }
-
+console.log(musicLink);
 return musicLink;
 }
 
