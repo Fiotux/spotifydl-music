@@ -7,7 +7,7 @@ RUN apt update && \
     ffmpeg && \
     rm -rf /var/lib/apt/lists/*
 
-RUN npm install -g spotify-dl --unsafe-perm
+RUN npm install -g spotifydl-music --unsafe-perm
 
 ## uncomment this for local testing
 # COPY ./ /usr/local/lib/node_modules/spotify-dl/ 
