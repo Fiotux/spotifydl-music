@@ -9,6 +9,10 @@
 
 &nbsp;
 
+#### Original
+
+[spotify-dl](https://github.com/SwapnilSoni1999/spotify-dl) made by [SwapnilSoni1999](https://github.com/SwapnilSoni1999)
+
 #### Required
 
 Get [FFMPEG](https://ffmpeg.org/download.html)

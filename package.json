@@ -1,5 +1,5 @@
 {
-  "name": "spotify-dl",
+  "name": "spotifydl-music",
   "productName": "Spotify Downloader",
   "version": "1.1.2",
   "description": "Spotify Songs, Playlist & Album Downloader",
@@ -13,15 +13,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SwapnilSoni1999/spotify-dl.git"
+    "url": "git+https://github.com/Fiotux/spotifydl-music.git"
   },
   "keywords": [
     "spotify-dl",
     "spotifydl",
-    "spotify-downloader"
+    "spotify-downloader",
+    "spotifydl-music"
   ],
   "type": "module",
-  "author": "Swapnil Soni",
+  "author": "Fiotux",
   "license": "ISC",
   "dependencies": {
     "axios": "^1.6.0",
