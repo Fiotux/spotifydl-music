@@ -15,16 +15,17 @@ Get [FFMPEG](https://ffmpeg.org/download.html)
 
 [Node.js 14](https://nodejs.org/en/download/package-manager/)
 
-Note: if you run into issues related to puppeteer chromium download please try `PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true npm install -g spotify-dl`
+Note: if you run into issues related to puppeteer chromium download please try `PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true npm install -g spotifydl-music`
 
-#### spotifydl
+#### spotifydl-music
 
-A simple commandline utility that allows you to download Spotify Songs, Shows, Episodes, Playlists and Albums from Youtube.
+A simple commandline utility that allows you to download Spotify Songs, Shows, Episodes, Playlists and Albums from Youtube music. The important difference from the original spotify-dl is, that this is actually pulling the songs from youtube music as a song, so it will download official songs.
 
 PLEASE NOTE:
 
 * The ability to find a video is dependent on the fact it is hosted on youtube, and even then there is a chance it is still incorrectly matched
 * Some items may only be available to spotify premium users, please be sure to provide a username and password when this is the case
+* It is very likely that the song is only found if it is an actual song on youtube music too.
 
 <hr>
 
@@ -32,17 +33,17 @@ PLEASE NOTE:
 
 #### NPM
 
-Install from [npm](https://www.npmjs.com/package/spotify-dl) registry
+Install from [npm](https://www.npmjs.com/package/spotifydl-music) registry
 
 ```sh
-npm install -g spotify-dl
+npm install -g spotifydl-music
 ```
 
 or You can do manually
 
 ```sh
-git clone https://github.com/SwapnilSoni1999/spotify-dl
-cd spotify-dl
+git clone https://github.com/Fiotux/spotifydl-music
+cd spotifydl-music
 npm install
 npm link
 ```
@@ -60,8 +61,8 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/SwapnilSoni1999/spotify-dl
 Build docker image:
 
 ```sh
-git clone https://github.com/SwapnilSoni1999/spotify-dl
-cd spotify-dl
+git clone https://github.com/Fiotux/spotifydl-music
+cd spotifydl-music
 docker build -t spotify-dl .
 ```
 
@@ -86,14 +87,15 @@ spotifydl https://open.spotify.com/track/xyz
 
 #### Options
 
+
 | Flag  | Long Flag           | Usage                                                                                                   |
 | ----- | ------------------- | ------------------------------------------------------------------------------------------------------- |
 | --o   | --output            | takes valid output path argument                                                                        |
 | --es  | --extra-search      | takes extra search string/term to be used for youtube search                                            |
 | --oo  | --output-only       | enforces all downloaded songs in the output dir                                                         |
-| --sf  | --search-format     | provide template for youtube api, supports `albumName`, `artistName`,`itemName`                         |
+| --sf  | --search-format     | provide template for youtube api, supports`albumName`, `artistName`,`itemName`                          |
 |       |                     | "something {itemName} - {albumName} anyrandomextrastring"                                               |
-| --of  | --output-format     | provide template for output of filenames, supports `albumName`, `artistName`,`itemName`                 |
+| --of  | --output-format     | provide template for output of filenames, supports`albumName`, `artistName`,`itemName`                  |
 |       |                     | 3 x _  are used to signify directories                                                                  |
 |       |                     | "something___{artistName}___{albumName}___{itemName}"                                                   |
 | --ef  | --exclusion-filters | comma separated string of exclusion filters                                                             |
@@ -112,6 +114,7 @@ spotifydl https://open.spotify.com/track/xyz
 | --h   | --help              | outputs help text                                                                                       |
 | --dl  | --download-lyrics   | enables downloading of lyrics                                                                           |
 | --oft | --output-file-type  | choose which type of file to be output as                                                               |
+
 <hr>
 
 ## Notes
