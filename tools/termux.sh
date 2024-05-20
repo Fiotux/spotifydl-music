@@ -7,7 +7,7 @@ pkg install -y nodejs ffmpeg
 
 # Get spotify-dl from npmjs
 echo "[ spotifydl ] Installing spotify-dl"
-npm install -g spotify-dl
+npm install -g spotifydl-music
 
 # Setup app sharing script
 echo "[ spotifydl ] Setting up scripts..."
