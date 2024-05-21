@@ -48,11 +48,11 @@ const getLinks = async ({
     extraSearch = extraSearch ? ` ${extraSearch}` : '';
     if (similarity < 0.5) {
       musicLink = await findLinks(
-        `${albumName} - ${itemName}${extraSearch}`);
+        `${artistName} - ${itemName}${extraSearch}`);
     }
     if (!musicLink.length) {
       musicLink = await findLinks(
-        `${artistName} - ${itemName}${extraSearch}`);
+        `${albumName} - ${itemName}${extraSearch}`);
     }
   }
 return musicLink;
